@@ -1,17 +1,18 @@
-name: Issue Notifications
+name: Repo Notifications
 
 on:
-  workflow_dispatch:  # Manual test button
+  workflow_dispatch:
   issues:
     types: [opened, edited, closed, reopened, assigned, unassigned, labeled, unlabeled]
   issue_comment:
     types: [created, edited, deleted]
+  push:
 
 jobs:
   email-notification:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Email for Any Issue Event
+      - name: Send Email for Repo Events
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -22,14 +23,17 @@ jobs:
           to: ${{ secrets.TO_EMAIL }}
           from: Big Mango Tree <${{ secrets.SMTP_USERNAME }}>
           subject: >
-            [${{ github.repository }}] Issue Event: ${{ github.event.issue.title }}
+            [${{ github.repository }}] Event: ${{ github.event_name }}
           body: |
             Repository: ${{ github.repository }}
-            Event: ${{ github.event.action }}
+            Event: ${{ github.event_name }}
             Actor: ${{ github.event.sender.login }}
 
-            Issue: #${{ github.event.issue.number }} — ${{ github.event.issue.title }}
-            Link:  ${{ github.event.issue.html_url }}
-
-            --------
-            ${{ github.event.comment.body || 'No comment text available.' }}
+            {% if github.event_name == 'push' %}
+            Commit: ${{ github.event.head_commit.message }}
+            Link:   ${{ github.event.head_commit.url }}
+            {% else %}
+            Issue:  #${{ github.event.issue.number }} — ${{ github.event.issue.title }}
+            Link:   ${{ github.event.issue.html_url }}
+            Comment: ${{ github.event.comment.body || 'N/A' }}
+            {% endif %}
