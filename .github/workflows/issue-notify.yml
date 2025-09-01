@@ -2,9 +2,9 @@ name: Issue Notifications
 
 on:
   workflow_dispatch:  # Manual test button
-  issues:             # Fires on any issue event
-    types: [opened, edited, deleted, transferred, pinned, unpinned, closed, reopened, assigned, unassigned, labeled, unlabeled, milestoned, demilestoned]
-  issue_comment:      # Fires when comment is created, edited, deleted
+  issues:
+    types: [opened, edited, closed, reopened, assigned, unassigned, labeled, unlabeled]
+  issue_comment:
     types: [created, edited, deleted]
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           to: ${{ secrets.TO_EMAIL }}
-          from: GitHub Issue Bot <${{ secrets.SMTP_USERNAME }}>
+          from: Big Mango Tree <${{ secrets.SMTP_USERNAME }}>
           subject: >
             [${{ github.repository }}] Issue Event: ${{ github.event.issue.title }}
           body: |
