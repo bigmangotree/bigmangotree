@@ -1,7 +1,7 @@
 name: Issue Notifications
 
 on:
-  workflow_dispatch: # Manual run button for testing
+  workflow_dispatch:
   issues:
     types: [opened]
   issue_comment:
@@ -35,4 +35,4 @@ jobs:
             ${{ github.event.comment.body || 'New issue opened.' }}
 
           to: ${{ secrets.TO_EMAIL }}
-          from: GitHub Issue Bot <${{ secrets.SMTP_USERNAME }}>
+          from: ${{ secrets.SMTP_USERNAME }}
