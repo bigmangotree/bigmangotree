@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>The CI/CD Fast-Track • Turn-Key GitHub Actions for AWS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="From git push to AWS in minutes – No YAML wrestling. Ship today; polish later." />
+  <link rel="canonical" href="https://bigmangotree.github.io/index.html" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+  <!-- Header Navigation -->
+  <header class="header-main">
+    <div class="layout-container">
+      <nav class="nav-container">
+        <a href="#hero" class="nav-brand">
+          <img src="images/bigmangotree-logo.png" alt="BigMangoTree Logo" class="nav-brand__logo">
+        </a>
+        <ul class="nav-menu">
+          <li><a href="#features" class="nav-link">Why</a></li>
+          <li><a href="#how-it-works" class="nav-link">How</a></li>
+          <li><a href="#products" class="nav-link">Variants</a></li>
+          <li><a href="#comparison" class="nav-link">Compare</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#about" class="nav-link">Who we are</a></li>
+          <li><a href="#support" class="nav-link">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="layout-section layout-section--hero">
+    <div class="hero-visual-container">
+      <div class="hero-content">
+        <span class="hero-badge">BigMangoTree</span>
+        <h1 class="hero-title">The CI/CD Fast-Track: Turn-Key GitHub Actions for AWS</h1>
+        <p class="hero-subtitle">From git push to AWS in minutes – No YAML wrestling. Ship today; polish later.</p>
+        <div class="hero-actions">
+          <a href="GUMROAD_20_FLASK" class="btn btn--primary">Buy $50 HTML</a>
+          <a href="#products" class="btn btn--secondary">See all variants</a>
+        </div>
+        <p class="text-center mt-lg" style="font-size: var(--font-size-sm); opacity: 0.8;">
+          Checksum included • Community support • 7-day refund (Quickstart + logs)
+          <sup style="cursor: pointer; color: #ff6b6b;" data-modal-open="#refund-modal">*</sup>
+        </p>
+      </div>
+      <div class="hero-visual-area">
+        <div class="hero-visual-accent"></div>
+        <div class="hero-visual-bg"></div>
+        <div class="hero-visual-main">
+            <img src="images/hero-artwork2.jpeg" alt="BigMangoTree Logo" class="feature__hero">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="layout-section">
+    <div class="layout-container">
+      <div class="section-header">
+        <h2 class="section-title">Why Fast-Track?</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="card">
+          <div class="card__icon">⚡</div>
+          <h3 class="card__title">Ship first, refine later</h3>
+          <p class="card__description">A working pipeline in minutes. Read the code and tune it when you're ready.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🔧</div>
+          <h3 class="card__title">Practical defaults</h3>
+          <p class="card__description">EC2 + Nginx, pinned Terraform, reproducible GitHub Actions—no hidden magic.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">⏰</div>
+          <h3 class="card__title">Time well spent</h3>
+          <p class="card__description">Skip YAML/IAM rabbit holes. Focus on your app, not the plumbing.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🔒</div>
+          <h3 class="card__title">Secure purchase</h3>
+          <p class="card__description">Buy via Gumroad, instant download, verified checksums for integrity.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">✅</div>
+          <h3 class="card__title">Clear expectations</h3>
+          <p class="card__description">
+            Community support. 7-day refund if Quickstart can't be completed (with logs).
+            <a data-modal-open="#refund-modal" style="cursor: pointer; text-decoration: underline;">Refund Policy</a>
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🛠️</div>
+          <h3 class="card__title">Mod-friendly</h3>
+          <p class="card__description">Plain Terraform + Actions. Change instance types, steps, AMIs—make it yours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="layout-section layout-section--alt">
+    <div class="layout-container">
+      <div class="layout-grid layout-grid--2col">
+        <div>
+          <h2 class="section-title text-left">How it works (3 steps)</h2>
+          <p class="section-subtitle text-left">Ship today; polish later. Get it live fast, then iterate—nothing in this
+            repo locks you in.</p>
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-content">
+                <h3>Spin up EC2</h3>
+                <p>with the setup script.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-content">
+                <h3>Add GitHub secrets</h3>
+                <p>(AWS keys, region).</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-content">
+                <h3>Push to main</h3>
+                <p>main — the pipeline builds and deploys to a public URL.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-xl">
+            <a href="#products" class="btn btn--outline">Explore Solutions</a>
+          </div>
+        </div>
+        <div class="hero-visual">⚡</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="layout-section">
+    <div class="layout-container">
+      <div class="section-header">
+        <h2 class="section-title">Choose your Fast-Track pipeline</h2>
+      </div>
+      <div class="layout-grid layout-grid--2col">
+        <div class="card card--product">
+          <div class="card__price">Starter $20 · Push-to-Deploy CI/CD</div>
+          <div style="padding: var(--space-xl);">
+            <h3 class="card__title">$20 — The CI/CD Fast-Track: HTML to AWS EC2 (GitHub Actions Edition)</h3>
+            <ul style="text-align: left; margin: var(--space-md) 0;">
+              <li>Static site → Nginx on EC2</li>
+              <li>Push-to-deploy workflow + Quickstart</li>
+            </ul>
+            <a href="GUMROAD_20_HTML" class="btn btn--primary">Buy $20 HTML</a>
+          </div>
+        </div>
+        <div class="card card--product">
+          <div class="card__price">Starter $20 · Push-to-Deploy CI/CD</div>
+          <div style="padding: var(--space-xl);">
+            <h3 class="card__title">$20 — The CI/CD Fast-Track: Python to AWS EC2 (GitHub Actions Edition)</h3>
+            <ul style="text-align: left; margin: var(--space-md) 0;">
+              <li>Flask demo → EC2 with Flask (direct on port 80)</li>
+              <li>Push-to-deploy workflow + Quickstart</li>
+            </ul>
+            <a href="GUMROAD_20_FLASK" class="btn btn--primary">Buy $20 Flask</a>
+          </div>
+        </div>
+        <div class="card card--product card--featured">
+            <div class="card__price header-color">Team Ready $50 · Multi-Stage CI/CD</div>
+            <div style="padding: var(--space-xl);">
+                <h3 class="card__title">
+                $50 — The CI/CD Fast-Track: HTML + Terraform to AWS EC2 (GitHub Actions Edition)
+                </h3>
+                <ul style="text-align: left; margin: var(--space-md) 0;">
+                <li>Multi-environment Terraform (Dev auto; Staging/Prod manual)</li>
+                <li>Bootstrap + reusable Terraform modules (VPC, S3, DynamoDB, EC2)</li>
+                <li>Deploy and Destroy workflows included</li>
+                <li>Static HTML app served via nginx on EC2</li>
+                </ul>
+                <a href="GUMROAD_50_HTML" class="btn btn--primary">Buy $50 HTML</a>
+            </div>
+        </div>
+        <div class="card card--product">
+            <div class="card__price">Team Ready $50 · Multi-Stage CI/CD</div>
+            <div style="padding: var(--space-xl);">
+                <h3 class="card__title">
+                $50 — The CI/CD Fast-Track: Flask + Terraform to AWS EC2 (GitHub Actions Edition)
+                </h3>
+                <ul style="text-align: left; margin: var(--space-md) 0;">
+                <li>Multi-environment Terraform (Dev auto; Staging/Prod manual)</li>
+                <li>Bootstrap + reusable Terraform modules (VPC, S3, DynamoDB, EC2)</li>
+                <li>Deploy and Destroy workflows included</li>
+                <li>Flask app served via port 80 on EC2</li>
+                </ul>
+                <a href="GUMROAD_50_FLASK" class="btn btn--primary">Buy $50 Flask</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section id="comparison" class="layout-section layout-section--alt">
+    <div class="layout-container">
+      <div class="section-header">
+        <h2 class="section-title">Turn-Key Options Compared</h2>
+      </div>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>$20 HTML</th>
+              <th>$20 Flask</th>
+              <th>$50 HTML</th>
+              <th>$50 Flask</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ideal for</strong></td>
+              <td>Best for launching a quick static site or portfolio with CI/CD in an afternoon.</td>
+              <td>Perfect for a simple Flask app or weekend project that needs easy push-to-deploy.</td>
+              <td>Great for teams wanting staged environments (Dev/Stage/Prod) for real projects or client work.</td>
+              <td>Best for hackathon winners who don’t want their Flask prototype to die on Monday.</td>
+            </tr>
+            <tr>
+              <td>Quickstart CI/CD</td>
+              <td><span class="table-checkmark">✓</span></td>
+              <td><span class="table-checkmark">✓</span></td>
+              <td><span class="table-checkmark">✓</span></td>
+              <td><span class="table-checkmark">✓</span></td>
+            </tr>
+            <tr>
+              <td>Deploy Target</td>
+              <td>EC2</td>
+              <td>EC2</td>
+              <td>EC2+Terraform</td>
+              <td>EC2+Terraform</td>
+            </tr>
+            <tr>
+              <td>Manual Deploy</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td><span class="table-checkmark">✓</span></td>
+              <td><span class="table-checkmark">✓</span></td>
+            </tr>
+            <tr>
+              <td>Docker Workflow</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td><span class="table-checkmark">✓</span></td>
+              <td><span class="table-checkmark">✓</span></td>
+            </tr>
+            <tr>
+              <td>Mock Test Script</td>
+              <td><span class="table-checkmark">✓</span></td>
+              <td><span class="table-checkmark">✓</span></td>
+              <td><span class="table-checkmark">✓</span></td>
+              <td><span class="table-checkmark">✓</span></td>
+            </tr>
+            <tr>
+              <td>Terraform Guardrails</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td><span class="table-checkmark">✓</span></td>
+              <td><span class="table-checkmark">✓</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center mt-lg text-secondary">
+        Need simple deploys? Pick $20. Need multi-env repeatability and speed? Pick $50.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- FAQ Section -->
+  <section id="faq" class="layout-section layout-section--alt">
+    <div class="layout-container">
+      <div class="section-header">
+        <h2 class="section-title">FAQ</h2>
+      </div>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary class="faq-question">What's the difference between $20 and $50?</summary>
+          <div class="faq-answer">
+            <p>$20 = single-env push-to-deploy (HTML or Flask). $50 = multi-env (Dev auto + manual Staging/Prod),
+              Terraform guardrails, destroy workflow, caching. Flask Pro adds Docker build + promotion scripts.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Can I upgrade from $20 to $50 later?</summary>
+          <div class="faq-answer">
+            <p>Yes. Replace the $20 workflows with the $50 set and follow the Quickstart. Your infra state can stay; you
+              mainly swap CI steps (test on a new branch first).</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">What are the prerequisites?</summary>
+          <div class="faq-answer">
+            <p>Before running any of the CI/CD pipelines, you’ll need a few prerequisites such as an <strong>AWS account</strong>, an <strong>IAM user with access keys</strong>, an <strong>EC2 key pair (PEM file)</strong>, and some <strong>GitHub Secrets</strong>.</p>
+            <p>👉 See our full <a href="./prerequisites.html">Prerequisites Setup Guide</a> for step-by-step instructions and official AWS/GitHub documentation links.</p>
+            <h4 id="-important-note-on-prerequisites-vs-your-app">⚡ Important Note on Prerequisites vs. Your App</h4>
+            <p>The items below are included <strong>only for the sample demo apps</strong> provided in this package:</p>
+            <ul>
+                <li><strong>$50 tier:</strong> AWS account with IAM credentials (user/role for Terraform + deploy).</li>
+                <li><strong>GitHub Repository</strong> with Actions enabled.</li>
+                <li><strong>Terraform</strong> (pinned version in MANIFEST).</li>
+                <li><strong>Flask variant:</strong> Python 3.10+ runtime (installed via setup scripts for the demo app).</li>
+                <li><strong>HTML variant:</strong> No runtime required — just static assets served by nginx.</li>
+            </ul>
+            <p>👉 For <strong>your own applications</strong>, you’ll need to install and configure any additional dependencies yourself by editing <code>setup_ec2.sh</code> (or extending the Terraform modules). The packaged scripts are intentionally lightweight, so you can adapt them to your stack.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Can I customize it?</summary>
+          <div class="faq-answer">
+            <p>Absolutely. You're licensed to modify for your own projects: edit variables (region, instance type), add
+              steps (linters/tests), swap AMIs, or extend the pipeline.</p>
+                
+              <p>👉 For full terms of use, see the <a href="./LICENSE.html">LICENSE.md</a> file.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">What's the support model?</summary>
+          <div class="faq-answer">
+            <p>Community support only. If AWS/GitHub changes break a script, open a GitHub Issue with logs—we'll patch.
+              No 1:1 consulting or SLAs included.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Refunds?</summary>
+          <div class="faq-answer">
+            <p>
+              We want you to succeed. If you can't complete the Quickstart within 7 days and share relevant
+              logs/errors, you qualify for a refund.
+              <a href="#" data-modal-open="#refund-modal">Read full Refund Policy →</a>
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">How do I verify my download is authentic?</summary>
+          <div class="faq-answer">
+            <p>
+              Each ZIP includes <code>checksums.txt</code> (SHA-256). Compare against your file:
+            <ul>
+              <li><b>macOS/Linux:</b> <code>shasum -a 256 file.zip</code></li>
+              <li><b>Windows (PowerShell):</b> <code>Get-FileHash file.zip -Algorithm SHA256</code></li>
+            </ul>
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">What does the license allow?</summary>
+          <div class="faq-answer">
+            <p>You can use and modify internally for your projects/teams. Redistribution/resale is not permitted. See
+              LICENSE.md for full terms.</p>
+          </div>
+        </details>
+
+        <div class="modal">
+          Want the full list? 👉
+          <a href="https://github.com/BigMangoTree/faq.md" target="_blank" rel="noopener">
+            View all FAQs on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE -->
+  <section id="about" class="layout-section layout-section--alt">
+    <div class="layout-container">
+      <div class="layout-grid layout-grid--2col" style="align-items: center; gap: var(--space-xxl);">
+        <div>
+          <div class="card" style="padding: var(--space-xl); text-align: left;">
+            <h3 style="color: var(--color-primary); margin-bottom: var(--space-md); font-size: 1.5rem;">
+              Who we are
+            </h3>
+
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: var(--space-lg);">
+              We're <strong>BigMangoTree</strong> indie builders who love turning infrastructure headaches into clean,
+              repeatable pipelines. We ship pragmatic tools that save time now and stay hackable later.
+            </p>
+
+            <div class="feature-grid"
+              style="grid-template-columns: 1fr; gap: var(--space-md); margin-bottom: var(--space-lg);">
+              <div style="display: flex; align-items: center; gap: var(--space-sm);">
+                <span style="color: var(--color-primary); font-size: 1.2rem;">🎯</span>
+                <span>Focused on AWS + GitHub Actions for launch</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-sm);">
+                <span style="color: var(--color-primary); font-size: 1.2rem;">🚀</span>
+                <span>Expanding to Azure, GCP, GitLab/Jenkins variants</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-sm);">
+                <span style="color: var(--color-primary); font-size: 1.2rem;">🤝</span>
+                <span>Transparent docs, verified downloads, community support</span>
+              </div>
+            </div>
+
+            <div
+              style="background: var(--color-bg-secondary); padding: var(--space-md); border-radius: var(--border-radius); border-left: 4px solid var(--color-primary);">
+              <p style="margin: 0; font-style: italic; color: var(--text-secondary);">
+                Got ideas or feedback? We welcome suggestions —
+                <a href="https://github.com/YOUR_REPO/feature-requests" target="_blank" rel="noopener"
+                  style="color: var(--color-primary); text-decoration: underline;">open a feature request</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Section -->
+  <section id="support" class="layout-section">
+    <div class="layout-container">
+      <div class="section-header">
+        <h2 class="section-title">Support & Links</h2>
+      </div>
+      <div
+        style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-xl);">
+        <a href="https://github.com/your-org/your-repo/issues" class="btn btn--outline">Issues Board</a>
+        <a href="https://github.com/your-org/your-repo/issues/new/choose" class="btn btn--outline">New Issue</a>
+        <a href="https://github.com/your-org/your-repo" class="btn btn--outline">Documentation</a>
+      </div>
+      <p class="text-center text-secondary">
+        Community support only • Typical reply 24–48h (business days) • Email: support@yourdomain.com
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="layout-container">
+      <div class="footer-content">
+        <h3 class="footer-title">The CI/CD Fast-Track</h3>
+        <p class="mb-xl">From git push to AWS in minutes – No YAML wrestling. Ship today; polish later.</p>
+        <a href="#products" class="btn btn--primary">See All 4 Turn-Key Solution Options</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="#" data-modal-open="#privacy-modal" class="footer-link">Privacy Policy</a>
+        <span>•</span>
+        <span>Not affiliated with AWS or GitHub</span>
+      </div>
+
+      <p style="opacity: 0.6; font-size: var(--font-size-sm); margin-top: var(--space-md);">
+        © BigMangoTree
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" class="scroll-top" title="Go to top">↑</button>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacy-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <button class="modal-close" data-modal-close aria-label="Close">✕</button>
+      <h3>Privacy Policy</h3>
+      <div style="color: var(--text-secondary); font-size: var(--font-size-sm); margin-bottom: var(--space-md);">
+        Effective: 20 Aug 2025</div>
+      <div>
+        <p>
+          This site (<b>bigmangotree.github.io</b>)is a static website
+          with no backend or user accounts. We don't collect personal details such as
+          names, emails, or payment information here.
+        </p>
+        <p>
+          We use <b>Google Analytics</b> to measure general traffic patterns
+          (for example: page views, referral sources, device/browser type).
+          This helps us understand how the site is used and improve it over time.
+        </p>
+        <p>
+          Data collected through Google Analytics is processed by Google and may include your IP address.
+          We don’t sell or share this data with anyone else. You can learn more in <a>Google’s Privacy Policy</a> or
+          opt out via the <a>Google Analytics Opt-Out</a> tool.
+        </p>
+        <p>
+          By using this site, you agree to this limited use of analytics.
+        </p>
+        <p>
+          <strong>Payments & downloads.</strong> Purchases and file delivery are handled by Gumroad.
+          Any information you provide at checkout is processed under Gumroad’s terms and
+          privacy policy. We do not receive your full payment details.
+        </p>
+        <p>
+          <strong>Support</strong> If you open a ticket on GitHub Issues,
+          your post (including any logs you share) is public on GitHub.
+          If you email us, we only use your message to reply and provide support;
+          we do not sell, rent, or share it with third parties.
+        </p>
+        <p>
+          <strong>No resale of data.</strong>
+          We do not sell or broker any personal information—ever.
+        </p>
+        <p>
+          <strong>Future changes.</strong>
+          If we add optional analytics or additional features later,
+          we’ll update this policy and note the change date.
+        </p>
+        <p>Questions? Contact: <a href="mailto:support@yourdomain.com">support@yourdomain.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Refund Policy Modal -->
+  <div id="refund-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <button class="modal-close" data-modal-close aria-label="Close">✕</button>
+      <h3>Refund Policy</h3>
+      <div style="color: var(--text-secondary); font-size: var(--font-size-sm); margin-bottom: var(--space-md);">
+        Effective for all CI/CD Fast-Track products sold via Gumroad
+      </div>
+      <div>
+        <p><strong>Window:</strong> Refunds are available within <b>7 calendar days</b> from purchase (based on the
+          Gumroad receipt timestamp).</p>
+        <p><strong>Eligibility.</strong> Refunds apply only if you are <em>unable to complete the documented
+            Quickstart</em> after following the steps as written and using supported platforms/versions.</p>
+
+        <p><strong>What to include.</strong> To request a refund, provide:
+        <ul>
+          <li>Gumroad <strong>order ID</strong> and purchaser email</li>
+          <li><strong>SKU/variant</strong> (e.g., $20 HTML / $50 Flask)</li>
+          <li><strong>Environment details</strong>: AWS region, Terraform version, GitHub runner OS</li>
+          <li>Link to the <strong>failing GitHub Actions run</strong> and relevant <strong>logs/screenshots</strong> (no
+            secrets)</li>
+          <li><strong>Checksum verification</strong> confirming your ZIP matches <code>checksums.txt</code></li>
+        </ul>
+        </p>
+
+        <p><strong>Exclusions (not refundable).</strong>
+        <ul>
+          <li>Incorrect or missing AWS credentials/permissions, region quotas, or local/network restrictions</li>
+          <li>Deviations from the Quickstart (modified workflows/infra beyond documented variables)</li>
+          <li>Third-party outages or changes outside our control</li>
+          <li>Buyer’s remorse, cost concerns, or incompatibility with unsupported stacks</li>
+        </ul>
+        </p>
+
+        <p><strong>Process.</strong> Open a GitHub Issue or email support with the above details. We’ll respond within
+          <strong>24–48 business hours</strong> to help diagnose. If we confirm a product defect preventing Quickstart
+          completion, we will issue a full refund via Gumroad; otherwise we’ll provide guidance to resolve the issue.
+          Final eligibility is determined at our discretion.</p>
+
+        <p><strong>After a refund.</strong> Your license is revoked for the refunded SKU; please delete all copies. One
+          refund per customer per SKU.</p>
+
+        <p class="muted" style="font-size:12px">Note: Gumroad processes the refund to your original payment method once
+          we approve it.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
