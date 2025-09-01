@@ -1,8 +1,8 @@
 ---
-name: "Bug report"
+name: "Issue Report"
 about: Workflows/scripts broke? Tell us.
-title: "[Bug] Short summary"
-labels: ["bug"]
+title: "[Issue] Short summary"
+labels: ["issue"]
 assignees: []
 ---
 
