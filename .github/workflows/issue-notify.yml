@@ -1,12 +1,9 @@
 name: Issue Notifications
 
 on:
-  # Manual test button in the Actions tab
-  workflow_dispatch:
-  # Fire when a new issue is opened
+  workflow_dispatch: # Manual run button for testing
   issues:
     types: [opened]
-  # Fire when a new comment is added to any issue
   issue_comment:
     types: [created]
 
@@ -17,7 +14,6 @@ jobs:
       - name: Send Email (new issue or comment)
         uses: dawidd6/action-send-mail@v3
         with:
-          # Gmail SMTP
           server_address: smtp.gmail.com
           server_port: 465
           secure: true
