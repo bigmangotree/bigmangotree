@@ -265,6 +265,18 @@ body {
   color: var(--text-inverse);
   justify-self: center;
 }
+.hero-visual-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(30deg, #ff6239, #fffdb5);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--text-inverse);
+  justify-self: center;
+}
 
 /* Buttons */
 .btn {
@@ -360,7 +372,7 @@ body {
 .card__icon {
   width: 60px;
   height: 60px;
-  background: var(--brand-primary);
+  background: #a6f2c2;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -395,14 +407,23 @@ body {
 
 .hero-visual-main .feature__hero
 {
-  width: 200px;
+  width: 430px;
 }
 
 .card--featured .header-color
 {
   background: linear-gradient(30deg, #029839, #18dcd2);
 }
-
+.VP__icon
+{
+    width: 154%;
+    position: relative;
+    top: -4px;
+}
+.hero2__icon
+{
+  width: 100%;
+}
 .card__price {
   background: var(--brand-primary);
   color: var(--text-inverse);
