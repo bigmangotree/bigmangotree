@@ -6,7 +6,7 @@ labels: Request
 assignees: ""
 ---
 
-# Support – BigMangoTree CI/CD Turnkey Products
+# Feature Request – BigMangoTree CI/CD Turnkey Products
 
 These products are sold as **community-support only**. No one-to-one setup or consulting is included.
 
